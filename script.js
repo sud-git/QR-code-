@@ -2,10 +2,10 @@ let btn = document.querySelector(".button");
 
 function generate(user_input) {
   const qrContainer = document.querySelector(".qr-code");
-  qrContainer.innerHTML = ""; // Clear old QR code
+  qrContainer.innerHTML = ""; // clear old QR
   qrContainer.style.display = "block";
 
-  // Generate QR code
+  // Generate QR
   let qrcode = new QRCode(qrContainer, {
     text: user_input.value,
     width: 180,
@@ -36,7 +36,6 @@ function generate(user_input) {
   }, 300);
 }
 
-// Event listener for button click
 btn.addEventListener("click", () => {
   let user_input = document.querySelector("#input_text");
   if (user_input.value.trim() !== "") {
