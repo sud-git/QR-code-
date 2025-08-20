@@ -7,21 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="heading">
-    <div class="title">QRcodes</div>
-    <div class="sub-title">Generate QRCode for anything!</div>
-  </section>
-
-  <section class="user-input">
-    <label for="input_text">Type something...</label>
-    <input type="text" name="input_text" id="input_text" autocomplete="off">
-    <button class="button" type="submit">Generate QR Code</button>
-  </section>
-
-  <div class="qr-code" style="display: none;"></div>
-
-  <!-- JS files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    <p>Enter text or URL below and generate your QR Code instantly!</p>
+    <input type="text" id="qrText" placeholder="Enter text or URL">
+    <button onclick="generateQR()">Generate QR Code</button>
+    <div id="qrCodeBox">
+      <img id="qrImage" src="" alt="Your QR Code will appear here">
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
